@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sortArr(a,arr_size)
+    {
+         
+        let num = 0; 
+        let hi = arr_size - 1; 
+        let mid = 0;
+        let temp = 0; 
+
+        while (mid <= hi)
+        {
+            if(a[mid] == 0)
+            {
+                temp = a[num]; 
+                a[num] = a[mid]; 
+                a[mid] = temp; 
+                num++; 
+                mid++; 
+            }
+            else if(a[mid] == 1)
+            {
+                mid++; 
+            }
+            else
+            {
+                temp = a[mid]; 
+                a[mid] = a[hi]; 
+                a[hi] = temp; 
+                hi--;
+            }
+             
+        }
+    }
+     
+    function printArray(arr,arr_size)
+    {
+        let i;
+        for (i = 0; i < arr_size; i++)
+        {
+            document.write(arr[i] + " ");
+        }
+        document.write("<br>");
+    }
+     
+    let arr= [0,1,2,0,1,2 ];
+     
+    let arr_size = arr.length;
+    sortArr(arr, arr_size);
+    printArray(arr, arr_size); 
+    </script>
+</body>
+</html>

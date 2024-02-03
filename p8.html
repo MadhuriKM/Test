@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function lengthOfLongestSubstring(str) {
+    let longest = "";
+    for (let i = 0; i < str.length; i++) {
+        if (longest.includes(str[i])) {
+            return longest.length
+        } else {
+            longest += str[i];
+        }
+    }
+    return longest.length;
+}
+
+console.log(lengthOfLongestSubstring("abcdefgabef"));
+        </script>
+</body>
+</html>

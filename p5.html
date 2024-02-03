@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function maxSum(a, size)
+{
+    var maxint = Math.pow(2, 53)
+    var num = -maxint - 1
+    var maxnum = 0
+      
+    for (var i = 0; i < size; i++)
+    {
+        maxnum = maxnum + a[i]
+        if (num < maxnum)
+            num = maxnum
+ 
+        if (maxnum < 0)
+            maxnum = 0 
+    }
+    return num
+}
+  
+// Driver code
+var a = [ -2, -3, 4, -1, -2, 1, 5, -3 ]
+document.write("Maximum contiguous sum is", 
+               maxSum(a, a.length))
+    </script>
+</body>
+</html>
